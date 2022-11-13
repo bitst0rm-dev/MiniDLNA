@@ -6,3 +6,4 @@
 10-do-not-close-socket-on-sighup.patch
 11-improve-nl-translation.patch
 12-upnphttp-Fix-chunk-length-parsing.patch
+13-spelling-and-typos.patch
