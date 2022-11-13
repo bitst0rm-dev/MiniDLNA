@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Alexander GQ Gerasiov <gq@debian.org>
 Build-Depends: autopoint,
-               debhelper-compat (= 12),
+               debhelper-compat (= 13),
                libavcodec-dev,
                libavformat-dev,
                libavutil-dev,
