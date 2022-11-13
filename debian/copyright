@@ -10,7 +10,7 @@ Source: https://sourceforge.net/projects/minidlna/files/
 
 Files: debian/*
 Copyright: 2010-2014, Benoît Knecht <benoit.knecht@fsfe.org>
-	   2015-2020, Alexander GQ Gerasiov <gq@debian.org>
+           2015-2020, Alexander GQ Gerasiov <gq@debian.org>
 License: BSD-3-clause
 
 Files: albumart.? containers.? image_utils.? monitor.? metadata.?
@@ -35,18 +35,18 @@ License: GPL-2
 
 Files: event.h
 Copyright: 2017, Gleb Smirnoff <glebius@FreeBSD.org>
-	   2020, Justin Maggard <jmaggard10@gmail.com>
+           2020, Justin Maggard <jmaggard10@gmail.com>
 License: GPL-2
 
 Files: kqueue.c select.c
 Copyright: 2002-2017, Igor Sysoev
-	   2011-2017, Nginx, Inc.
-	   2017-2018, Gleb Smirnoff <glebius@FreeBSD.org>
+           2011-2017, Nginx, Inc.
+           2017-2018, Gleb Smirnoff <glebius@FreeBSD.org>
 License: BSD-2-clause
 
 Files: monitor_kqueue.c
 Copyright: 2013, Bernard Spil <brnrd@FreeBSD.org>
-	   2017-2018 Gleb Smirnoff <glebius@FreeBSD.org>
+           2017-2018 Gleb Smirnoff <glebius@FreeBSD.org>
 License: BSD-2-clause
 
 Files: avahi.?
@@ -99,7 +99,7 @@ License: GPL-2
 
 Files: debian/minidlna.conf.5
 Copyright: 2008, Noel Butler <noelb@ausics.net>
-	   2009, Justin Maggard <jmaggard@users.sourceforge.net>
+           2009, Justin Maggard <jmaggard@users.sourceforge.net>
            2010-2012, Benoît Knecht <benoit.knecht@fsfe.org>
            2015-2020, Alexander Gerasiov <gq@debian.org>
 License: GPL-2
