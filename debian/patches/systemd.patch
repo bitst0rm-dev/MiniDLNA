@@ -1,0 +1,99 @@
+--- minidlna-1.3.0+dfsg.orig/configure.ac
++++ minidlna-1.3.0+dfsg/configure.ac
+@@ -514,6 +514,8 @@
+ 
+ AC_CHECK_FUNCS(kqueue, AM_CONDITIONAL(HAVE_KQUEUE, true), AM_CONDITIONAL(HAVE_KQUEUE, false))
+ 
++PKG_CHECK_MODULES([LIBSYSTEMD],[libsystemd],[AC_DEFINE(HAVE_LIBSYSTEMD,1,[Whether libsystemd is available])],[ ])
++
+ ################################################################################################################
+ ### Build Options
+ 
+--- minidlna-1.3.0+dfsg.orig/minidlna.c
++++ minidlna-1.3.0+dfsg/minidlna.c
+@@ -77,6 +77,10 @@
+ #include <libintl.h>
+ #endif
+ 
++#ifdef HAVE_LIBSYSTEMD
++#include <systemd/sd-daemon.h>
++#endif
++
+ #include "event.h"
+ #include "upnpglobalvars.h"
+ #include "sql.h"
+@@ -112,9 +116,16 @@
+ OpenAndConfHTTPSocket(unsigned short port)
+ {
+ 	int s;
+-	int i = 1;
++	int i;
+ 	struct sockaddr_in listenname;
+ 
++#ifdef HAVE_LIBSYSTEMD
++	s = sd_listen_fds(0);
++	for (i = 0; i < s; ++i)
++		if (sd_is_socket_inet(SD_LISTEN_FDS_START + i, 0, SOCK_STREAM, 1, 0) > 0)
++			return SD_LISTEN_FDS_START + i;
++#endif
++
+ 	/* Initialize client type cache */
+ 	memset(&clients, 0, sizeof(struct client_cache_s));
+ 
+@@ -125,6 +136,7 @@
+ 		return -1;
+ 	}
+ 
++	i = 1;
+ 	if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &i, sizeof(i)) < 0)
+ 		DPRINTF(E_WARN, L_GENERAL, "setsockopt(http, SO_REUSEADDR): %s\n", strerror(errno));
+ 
+--- minidlna-1.3.0+dfsg.orig/minissdp.c
++++ minidlna-1.3.0+dfsg/minissdp.c
+@@ -42,6 +42,10 @@
+ #include <arpa/inet.h>
+ #include <errno.h>
+ 
++#ifdef HAVE_LIBSYSTEMD
++#include <systemd/sd-daemon.h>
++#endif
++
+ #include "event.h"
+ #include "minidlnapath.h"
+ #include "upnphttp.h"
+@@ -95,9 +99,16 @@
+ OpenAndConfSSDPReceiveSocket(void)
+ {
+ 	int s;
+-	int i = 1;
++	int i;
+ 	struct sockaddr_in sockname;
+ 	
++#ifdef HAVE_LIBSYSTEMD
++	s = sd_listen_fds(0);
++	for (i = 0; i < s; ++i)
++		if (sd_is_socket_inet(SD_LISTEN_FDS_START + i, 0, SOCK_DGRAM, -1, 0) > 0)
++			return SD_LISTEN_FDS_START + i;
++#endif
++
+ 	s = socket(PF_INET, SOCK_DGRAM, 0);
+ 	if (s < 0)
+ 	{
+@@ -105,6 +116,7 @@
+ 		return -1;
+ 	}	
+ 
++	i = 1;
+ 	if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &i, sizeof(i)) < 0)
+ 		DPRINTF(E_WARN, L_SSDP, "setsockopt(udp, SO_REUSEADDR): %s\n", strerror(errno));
+ #ifdef __linux__
+--- minidlna-1.3.0+dfsg.orig/Makefile.am
++++ minidlna-1.3.0+dfsg/Makefile.am
+@@ -58,6 +58,7 @@
+ 	@LIBEXIF_LIBS@ \
+ 	@LIBINTL@ \
+ 	@LIBICONV@ \
++	@LIBSYSTEMD_LIBS@ \
+ 	-lFLAC $(flacogglibs) $(vorbislibs) $(avahilibs)
+ 
+ testupnpdescgen_SOURCES = testupnpdescgen.c upnpdescgen.c
