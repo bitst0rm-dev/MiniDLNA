@@ -1,6 +1,7 @@
-Author: Benoît Knecht <benoit.knecht@fsfe.org>
-Description: Use /run instead of /var/run to store runtime files
-Last-Update: 2015-03-01
+From: =?utf-8?q?Beno=C3=AEt_Knecht?= <benoit.knecht@fsfe.org>
+Date: Sun, 1 Mar 2015 22:11:34 +0100
+Subject: Use /run instead of /var/run to store runtime files
+
 ---
  upnpglobalvars.c | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)

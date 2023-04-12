@@ -1,3 +1,11 @@
+From: Alexander GQ Gerasiov <gq@debian.org>
+Date: Wed, 12 Apr 2023 22:11:34 +0100
+Subject: improve-nl-translation
+
+---
+ po/nl.po | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
 diff --git a/po/nl.po b/po/nl.po
 index 0e0c1b6..b4dc97a 100644
 --- a/po/nl.po

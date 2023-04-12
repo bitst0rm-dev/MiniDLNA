@@ -1,13 +1,16 @@
-Author: Benoît Knecht <benoit.knecht@fsfe.org>
-Description: Update help output shown by "minidlna -h"
-Updated: 2015-03-01
+From: =?utf-8?q?Beno=C3=AEt_Knecht?= <benoit.knecht@fsfe.org>
+Date: Sun, 1 Mar 2015 22:11:34 +0100
+Subject: Update help output shown by "minidlna -h"
+
 ---
  minidlna.c | 11 +++++++----
  1 file changed, 7 insertions(+), 4 deletions(-)
 
+diff --git a/minidlna.c b/minidlna.c
+index 4f972f0..47ca712 100644
 --- a/minidlna.c
 +++ b/minidlna.c
-@@ -969,11 +969,14 @@
+@@ -969,11 +969,14 @@ init(int argc, char **argv)
  
  	if (runtime_vars.port <= 0)
  	{
