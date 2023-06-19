@@ -1,3 +1,10 @@
+minidlna (1.3.2+dfsg-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * upnphttp: Fix chunk length parsing (CVE-2023-33476) (Closes: #1037052)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 19 Jun 2023 21:14:33 +0200
+
 minidlna (1.3.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release (Closes: #1005219, #1011629, #1017183, #1024905).
