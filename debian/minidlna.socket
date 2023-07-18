@@ -1,0 +1,10 @@
+[Unit]
+Description=MiniDLNA lightweight DLNA/UPnp-AV sockets
+
+[Socket]
+ListenStream=8200
+ListenDatagram=239.255.255.250:1900
+
+[Install]
+WantedBy=sockets.target
+Also=minidlna.service

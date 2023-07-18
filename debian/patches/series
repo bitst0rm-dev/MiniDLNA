@@ -6,3 +6,4 @@
 10-do-not-close-socket-on-sighup.patch
 13-spelling-and-typos.patch
 14-autoupdate.patch
+15-systemd.patch
