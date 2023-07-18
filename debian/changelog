@@ -1,4 +1,4 @@
-minidlna (1.3.2+dfsg-1.2) UNRELEASED; urgency=medium
+minidlna (1.3.3+dfsg-0.1) UNRELEASED; urgency=medium
 
   * debian/copyright: use spaces rather than tabs to start continuation lines.
   * Bump debhelper from old 12 to 13.
@@ -11,8 +11,10 @@ minidlna (1.3.2+dfsg-1.2) UNRELEASED; urgency=medium
   * remove annoying extra space in quilt patch
   * autoconf updates patch
   * Modernize debian/watch uscan support file
+  * New upstream release
+  * Forward port patches (two have been upstreamed)
 
- -- Barak A. Pearlmutter <bap@debian.org>  Tue, 18 Jul 2023 10:14:52 +0200
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 18 Jul 2023 10:39:29 +0200
 
 minidlna (1.3.2+dfsg-1.1) unstable; urgency=medium
 
