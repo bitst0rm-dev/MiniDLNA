@@ -38,7 +38,7 @@ index dcfc625..914ace0 100644
  
  testupnpdescgen_SOURCES = testupnpdescgen.c upnpdescgen.c
 diff --git a/configure.ac b/configure.ac
-index a30380e..cda7556 100644
+index 11421a5..a6247da 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -525,6 +525,8 @@ AC_CHECK_FUNCS(inotify_init,

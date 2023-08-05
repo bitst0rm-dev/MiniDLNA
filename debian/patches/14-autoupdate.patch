@@ -7,7 +7,7 @@ Subject: autoupdate
  1 file changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index b632bcb..a30380e 100644
+index b632bcb..11421a5 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -14,11 +14,11 @@
@@ -15,7 +15,7 @@ index b632bcb..a30380e 100644
  # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  # USA.
 -AC_INIT(MiniDLNA,1.1.3,,minidlna)
-+AC_INIT([MiniDLNA],[1.3.2],[],[minidlna],[http://sourceforge.net/projects/minidlna/])
++AC_INIT([MiniDLNA],[1.3.3],[],[minidlna],[http://sourceforge.net/projects/minidlna/])
  #LT_INIT
  
  AC_CANONICAL_TARGET
