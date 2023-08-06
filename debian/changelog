@@ -17,8 +17,10 @@ minidlna (1.3.3+dfsg-0.1) UNRELEASED; urgency=medium
   * Modernize debian/watch uscan support file
   * New upstream release
   * Forward port patches (two have been upstreamed)
+  * Update stray old version number in patch
+  * Add BUGS section to minidlnad(1) with manual audio transcoding example
 
- -- Barak A. Pearlmutter <bap@debian.org>  Tue, 18 Jul 2023 15:01:44 +0200
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 06 Aug 2023 13:08:04 +0100
 
 minidlna (1.3.2+dfsg-1.1) unstable; urgency=medium
 
