@@ -12,9 +12,7 @@ Build-Depends: debhelper-compat (= 13),
                libjpeg-dev,
                libogg-dev,
                libsqlite3-dev,
-               libsystemd-dev,
                libvorbis-dev,
-               pkg-config,
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://sourceforge.net/projects/minidlna/

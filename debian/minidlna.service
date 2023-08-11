@@ -19,4 +19,3 @@ ExecStart=/usr/sbin/minidlnad -f $CONFIGFILE -P /run/minidlna/minidlna.pid -S $D
 
 [Install]
 WantedBy=multi-user.target
-Also=minidlna.socket
