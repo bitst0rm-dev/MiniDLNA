@@ -1,3 +1,9 @@
+minidlna (1.3.3+dfsg-0.2) unstable; urgency=medium
+
+  * Add thumbnail patch from sourceforce forums
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 06 Nov 2023 10:30:57 +0000
+
 minidlna (1.3.3+dfsg-0.1) unstable; urgency=medium
 
   * Non-maintainer upload.
