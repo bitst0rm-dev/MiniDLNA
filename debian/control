@@ -27,8 +27,8 @@ Depends: adduser,
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: lightweight DLNA/UPnP-AV server targeted at embedded systems
- MiniDLNA (aka ReadyDLNA) is server software with the aim of being
- fully compliant with DLNA/UPnP-AV clients.
+ MiniDLNA (aka ReadyDLNA or ReadyMedia) is server software with the
+ aim of being fully compliant with DLNA/UPnP-AV clients.
  .
  The minidlna daemon serves media files (music, pictures, and video) to
  clients on your network.  Example clients include applications such as
