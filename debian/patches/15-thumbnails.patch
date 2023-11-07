@@ -1,7 +1,11 @@
 From: "Barak A. Pearlmutter" <barak+git@pearlmutter.net>
-Date: Mon, 6 Nov 2023 10:27:52 +0000
+Date: Mon, 21 Aug 2023 12:00:00 +0000
 Subject: thumbnails
 
+This patch is from
+https://sourceforge.net/p/minidlna/patches/_discuss/thread/28a9f79d/9aca/attachment/minidlna-1.3.3-thumb.patch
+by https://sourceforge.net/u/wilderman/profile/
+with changes to derived and cache files (configure and such) removed.
 ---
  Makefile.am       |  4 ++--
  albumart.c        | 62 +++++++++++++++++++++++++++++++++++++++++++++++++++++--
