@@ -1,3 +1,10 @@
+minidlna (1.3.3+dfsg+bs0-1) unstable; urgency=medium
+
+  * Add 16-support-album-cover-art-sizes.patch
+    Thanks nymous https://sourceforge.net/p/minidlna/patches/153/
+
+ -- bitst0rm <bitst0rm@users.noreply.github.com>  Mon, 01 Jan 2024 15:23:03 +0100
+
 minidlna (1.3.3+dfsg-0.3) unstable; urgency=medium
 
   * Non-maintainer upload
